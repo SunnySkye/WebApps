@@ -1,0 +1,199 @@
+/* App Layout */
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Main Content */
+.app-main {
+  flex: 1;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+.protected-content {
+  background: #e8f5e9;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Footer */
+.app-footer {
+  margin-top: auto;
+  padding: 1rem 0;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  color: #666;
+}
+
+.app-footer code {
+  background: #f0f0f0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Auth Status */
+.auth-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info {
+  font-weight: 500;
+}
+
+/* Buttons */
+button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #1557b0;
+}
+
+.logout-button {
+  background-color: #dc3545;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+/* Auth States */
+.auth-loading,
+.auth-error,
+.auth-required {
+  text-align: center;
+  padding: 2rem;
+}
+
+.auth-error {
+  color: #dc3545;
+}
+
+/* User Profile */
+.user-profile {
+  margin-top: 1rem;
+}
+
+.user-profile h2 {
+  margin-bottom: 1rem;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-details dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1rem;
+  margin: 0;
+}
+
+.profile-details dt {
+  font-weight: 600;
+  color: #555;
+}
+
+.profile-details dd {
+  margin: 0;
+}
+
+.token-info {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.token-info summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.token-details {
+  margin-top: 1rem;
+}
+
+.token-details p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .app-header,
+  .app-footer {
+    border-color: #444;
+  }
+
+  section {
+    background: #2a2a2a;
+  }
+
+  .protected-content {
+    background: #1e3a29;
+  }
+
+  .app-footer {
+    color: #aaa;
+  }
+
+  .app-footer code {
+    background: #333;
+  }
+
+  .token-info {
+    background: #333;
+  }
+
+  .profile-details dt {
+    color: #aaa;
+  }
+}
